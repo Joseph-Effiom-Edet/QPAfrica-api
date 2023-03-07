@@ -20,6 +20,6 @@ app.use(cookieParser());
 app.use("/", userRoute);
 app.use("/api/auth", authRoute);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 9000, () => {
   console.log("Server Connected!!!");
 });
