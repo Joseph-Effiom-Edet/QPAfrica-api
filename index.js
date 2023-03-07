@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
+import userRoute from "./routes/user.js";
 import authRoute from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -16,6 +17,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
+app.use("/", userRoute);
 app.use("/api/auth", authRoute);
 
 app.listen(process.env.PORT || 5000, () => {

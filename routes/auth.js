@@ -5,10 +5,6 @@ import jwt from "jsonwebtoken";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-  res.json("gettatt!!!");
-});
-
 router.post("/register", async (req, res) => {
   const newUser = new User({
     email: req.body.email,
